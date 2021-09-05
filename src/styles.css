@@ -1,0 +1,77 @@
+body {
+  font-family: "Amatic SC", cursive;
+  background: linear-gradient(
+    181.2deg,
+    rgb(181, 239, 249) 10.5%,
+    rgb(254, 254, 254) 86.8%
+  );
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 38px;
+}
+li {
+  border-color: #f1fcfe;
+  border: solid;
+  margin-left: 3px;
+  border-bottom-style: none;
+  border-top-style: none;
+  border-style: inset;
+}
+ul {
+  list-style: none;
+  padding: 0px;
+}
+span:hover {
+  background: #f1fcfe;
+  transition: all 200ms ease-in-out;
+}
+.locate {
+  padding: 0px 15px;
+  border-color: #ffff;
+  border-radius: 10px;
+  font-size: 28px;
+  border-style: solid;
+}
+.locate:hover {
+  background: #ffff;
+  transition: all 200ms ease-in-out;
+  border-radius: 15px;
+}
+span:hover {
+  background: #f1fcfe;
+  transition: all 200ms ease-in-out;
+}
+.search-form-whole {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 28px;
+}
+.day {
+  font-weight: bolder;
+  font-size: 24px;
+}
+.container-forecast {
+  margin-left: 10px;
+}
+.container-days {
+  margin-left: 0px;
+  margin-top: 15px;
+}
+.weather-element {
+  font-weight: bolder;
+  font-size: 30px;
+}
+.weather-measure {
+  font-size: 25px;
+}
+#search-button {
+  padding: 0px 15px;
+  font-size: 28px;
+  border-radius: 10px;
+}
