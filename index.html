@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<title>Weather Check</title>
+			<link
+				href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+				rel="stylesheet"
+				integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+				crossorigin="anonymous"
+			/>
+			<link rel="stylesheet" href="src/styles.css" />
+			<link rel="preconnect" href="https://fonts.googleapis.com" />
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+			<link
+				href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap"
+				rel="stylesheet"
+			/>
+			<script src="https://kit.fontawesome.com/6c5f5576aa.js" crossorigin="anonymous"></script>
+			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		</head>
+		<body>
+				<form id = "search-form">
+				<div class="search-form-whole">
+				<input type="text" placeholder="🔍 Search city" id= "city-input"/>
+				<button type="submit" class="btn btn-outline-primary" id = "search-button"/>
+					Search 
+				</button>
+				<buttonCL type = "submit" class="locate" id ="current-location" /> Current Location 
+			</button>
+			</div>
+		</form>
+			<div class="container-now">
+				<h1>Current City</h1> 
+				<h2> Current Date </h2>
+				<h3>Current Temperature</h3>	
+			</div>
+<hr width = 875px;>
+<hr width = 875px; >
+			<div class="container-forecast">
+				<div class="row">
+
+					<div class="col-2" id = "temp">
+							<span class= "weather-element">Temperature 🌡</span></br><span class= "weather-measure"> 90°F</span>
+					</div>
+
+				<div class="col-2" id = "precipitation">
+						<span class= "weather-element">Precipitation ☔️</span> 
+				</br> <span class= "weather-measure">10% </span>
+				</div>
+
+				<div class="col-2 order-3" id = "wind">
+						<span class= "weather-element">Wind 💨 </span></br> <span class= "weather-measure">2 mph SSW </span>
+				</div>
+
+			</div>
+
+			<div class="container-days">
+					<ul class="row">
+						<li class="col-1"><span class = "day">Sun</span></br>  Sunny ☀️ 92°F / 85°F</li>
+						<li class="col-1"><span class = "day">Mon</span> </br>   Windy💨 89°F / 80°F</li>
+						<li class="col-1"><span class = "day">Tues</span> </br>  Thunderstorms⛈ 85°F / 74°F </li>
+						<li class="col-1" ><span class = "day">Wed</span> </br>  Cloudy🌥 87°F / 82°F</li>
+						<li class="col-1"><span class = "day">Thurs</span> </br>  Sunny☀️ 100°F / 90°F</li>
+						<li class="col-1"><span class = "day">Fri</span> </br>  Sunny☀️ 101°F / 92°F</li>
+						<li class="col-1"><span class = "day">Sat</span> </br>  Cloudy🌥 90°F / 83°F</li>
+					</ul>
+				</div>
+
+			</div>
+		</body>
+	<div id="app"></div>
+	<script src="src/index.js"></script>
+
