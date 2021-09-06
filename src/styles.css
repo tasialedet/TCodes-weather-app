@@ -27,10 +27,7 @@ ul {
   list-style: none;
   padding: 0px;
 }
-span:hover {
-  background: #f1fcfe;
-  transition: all 200ms ease-in-out;
-}
+
 .locate {
   padding: 0px 15px;
   border-color: #ffff;
@@ -43,7 +40,7 @@ span:hover {
   transition: all 200ms ease-in-out;
   border-radius: 15px;
 }
-span:hover {
+.current-location {
   background: #f1fcfe;
   transition: all 200ms ease-in-out;
 }
