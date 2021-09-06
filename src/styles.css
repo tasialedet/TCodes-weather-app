@@ -51,6 +51,7 @@ span:hover {
   text-align: left;
   margin-left: 10px;
   font-size: 28px;
+  border: 2px solid white;
 }
 .day {
   font-weight: bolder;
