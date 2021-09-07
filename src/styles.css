@@ -48,7 +48,6 @@ ul {
   text-align: left;
   margin-left: 10px;
   font-size: 28px;
-  border: 2px solid black;
 }
 .day {
   font-weight: bolder;
@@ -67,6 +66,10 @@ ul {
 }
 .weather-measure {
   font-size: 25px;
+}
+.weather-app {
+  border: 2px solid black;
+  border-radius: 15px;
 }
 
 #search-button {
