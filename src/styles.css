@@ -7,9 +7,7 @@ h1 {
 h2 {
   font-size: 40px;
 }
-h3 {
-  font-size: 38px;
-}
+
 li {
   border-color: #f1fcfe;
   border: solid;
@@ -73,6 +71,9 @@ ul {
     rgb(181, 239, 249) 10.5%,
     rgb(254, 254, 254) 86.8%
   );
+}
+.temp {
+  font-size: 38px;
 }
 #search-button {
   padding: 0px 15px;
