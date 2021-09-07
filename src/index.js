@@ -39,7 +39,7 @@ function showWeatherConditions(response) {
   h1.innerHTML = `${city}`;
 
   let h3 = document.querySelector("h3");
-  h3.innerHTML = `${Math.round(celsiusTemperature)}`;
+  h3.innerHTML = Math.round(celsiusTemperature);
 }
 
 function showPosition(position) {
