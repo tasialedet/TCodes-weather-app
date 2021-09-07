@@ -65,7 +65,7 @@ ul {
 .weather-app {
   border: 2px solid black;
   border-radius: 15px;
-  max-width: 700px;
+  max-width: 900px;
   padding-left: 20px;
   margin-left: 20px;
   background: linear-gradient(
@@ -74,9 +74,9 @@ ul {
     rgb(254, 254, 254) 86.8%
   );
 }
-.units
 #search-button {
   padding: 0px 15px;
   font-size: 28px;
   border-radius: 10px;
+  color: black;
 }

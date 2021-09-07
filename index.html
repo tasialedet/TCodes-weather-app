@@ -26,9 +26,9 @@
 		<body>
 			    <div class = "weather-app">
 				<div class="search-form-whole">
-                    <form id = "search-form"></form>
-				<input type="text" placeholder="🔍 Search city" id= "city-input"/>
-				<button type="submit" class="btn btn-outline-primary" id = "search-button">
+                    <form id = "search-form" ></form>
+				<input type="text" placeholder="🔍 Search city" id= "city-input" autocomplete="off"/>
+				<button type= "submit" class="btn btn-outline-primary" id = "search-button">
 					Search 
 				</button>
 				<buttonCL type = "submit" class="locate" id ="current-location"> Current Location 
@@ -36,9 +36,9 @@
 		</form>
 		</div>
 			<div class="container-now">
-				<h1>Current City</h1> 
-				<h2> Current Date </h2>
-				<h3>Current Temperature <span class = "units"><a href = "#" id = "celsius">°C</a>|<a href = "#" id = "fahrenheit">°F</a></span> <h3></h3>
+				<h1 id = "city"></h1> 
+				<h2 id = "date"></h2>
+				<h3 id = "temperature"></h3> <span class = "units"><a href = "#" id = "celsius">°C</a>|<a href = "#" id = "fahrenheit">°F</a></span> 
 			</div>
 
 			<div class="container-forecast">
