@@ -1,10 +1,5 @@
 body {
   font-family: "Amatic SC", cursive;
-  background: linear-gradient(
-    181.2deg,
-    rgb(181, 239, 249) 10.5%,
-    rgb(254, 254, 254) 86.8%
-  );
 }
 h1 {
   font-size: 50px;
@@ -73,6 +68,11 @@ ul {
   max-width: 700px;
   padding-left: 20px;
   margin-left: 20px;
+  background: linear-gradient(
+    181.2deg,
+    rgb(181, 239, 249) 10.5%,
+    rgb(254, 254, 254) 86.8%
+  );
 }
 
 #search-button {
