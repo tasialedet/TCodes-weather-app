@@ -33,6 +33,7 @@ form.addEventListener("submit", searchCity);
 
 function showWeatherConditions(response) {
   let city = response.data.name;
+
   celsiusTemperature = response.data.main.temp;
 
   let h1 = document.querySelector("h1");
@@ -73,8 +74,8 @@ let celsiusTemperature = null;
 let buttonCL = document.querySelector("#current-location");
 buttonCL.addEventListener("click", getPosition);
 
-let celsiusTemperature = document.querySelector(response.data.main.temp);
-celsiusTemperature.addEventListener("click", displayCelsius);
+let celsiusTemp = document.querySelector(response.data.main.temp);
+celsiusTemp.addEventListener("click", displayCelsius);
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsius);
