@@ -65,7 +65,6 @@ function displayCelsius(event) {
 }
 function displayFahrenheit(event) {
   event.preventDefault();
-  alert("Hello");
 
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
