@@ -49,10 +49,10 @@ function showWeatherConditions(response) {
   let weatherDesribe = document.querySelector("#description");
   weatherDesribe.innerHTML = `${descriptionElement}`;
 
-  let weatherIcon = document.querySelector("#weather-icon");
+  let weatherIcon = document.querySelector("#icon-pic");
   weatherIcon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${iconElement}@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
   let windSpeed = document.querySelector("#weather-wind");
