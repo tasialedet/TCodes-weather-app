@@ -34,8 +34,9 @@ form.addEventListener("submit", searchCity);
 function showWeatherConditions(response) {
   console.log(response);
   let city = response.data.name;
-  let description = response.data.weather[0].description;
-  let icon = response.data.weather[0].icon;
+  let descriptionElement = response.data.weather[0].description;
+  let iconElement = response.data.weather[0].icon;
+  let windElement = response.data.wind.speed;
 
   celsiusTemperature = response.data.main.temp;
 
@@ -46,10 +47,16 @@ function showWeatherConditions(response) {
   tempElement.innerHTML = Math.round(celsiusTemperature);
 
   let weatherDesribe = document.querySelector("#description");
-  weatherDesribe.innerHTML = `${description}`;
+  weatherDesribe.innerHTML = `${descriptionElement}`;
 
   let weatherIcon = document.querySelector("#weather-icon");
-  weatherIcon.innerHTML = `${icon}`;
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${iconElement}@2x.png`
+  );
+
+  let windSpeed = document.querySelector("#weather-wind");
+  windSpeed.innerHtml = `${windElement}`;
 }
 
 function showPosition(position) {
