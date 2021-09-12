@@ -36,7 +36,7 @@ function showWeatherConditions(response) {
   let city = response.data.name;
   let descriptionElement = response.data.weather[0].description;
   let iconElement = response.data.weather[0].icon;
-  let windElement = response.data.wind.speed;
+  let windElement = Math.round(response.data.wind.speed);
 
   celsiusTemperature = response.data.main.temp;
 
@@ -56,7 +56,7 @@ function showWeatherConditions(response) {
   );
 
   let windSpeed = document.querySelector("#weather-wind");
-  windSpeed.innerHTML = `${windElement}${response.data.wind.speed.unit}${response.data.wind.direction.code}`;
+  windSpeed.innerHTML = `${windElement}${response.data.wind.speed.unit}`;
 }
 
 function showPosition(position) {

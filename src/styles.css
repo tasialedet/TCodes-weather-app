@@ -75,6 +75,9 @@ ul {
 .temp {
   font-size: 38px;
 }
+.units {
+  font-size: 20px;
+}
 #weather-wind {
   font-size: 20px;
 }
