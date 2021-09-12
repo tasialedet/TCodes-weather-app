@@ -75,7 +75,9 @@ ul {
 .temp {
   font-size: 38px;
 }
-
+#weather-wind {
+  font-size: 30px;
+}
 #search-button {
   padding: 0px 15px;
   font-size: 28px;
