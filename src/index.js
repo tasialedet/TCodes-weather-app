@@ -56,7 +56,7 @@ function showWeatherConditions(response) {
   );
 
   let windSpeed = document.querySelector("#weather-wind");
-  windSpeed.innerHtml = `${windElement}`;
+  windSpeed.innerHTML = `${windElement}`;
 }
 
 function showPosition(position) {
