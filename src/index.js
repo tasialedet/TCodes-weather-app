@@ -32,7 +32,10 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
 
 function showWeatherConditions(response) {
+  console.log(response);
   let city = response.data.name;
+  let description = response.data.weather[0].description;
+  let icon = response.data.weather[0].icon;
 
   celsiusTemperature = response.data.main.temp;
 
@@ -41,6 +44,12 @@ function showWeatherConditions(response) {
 
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(celsiusTemperature);
+
+  let weatherDesribe = document.querySelector("#description");
+  weatherDesribe.innerHTML = `${description}`;
+
+  let weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.innerHTML = `${icon}`;
 }
 
 function showPosition(position) {
