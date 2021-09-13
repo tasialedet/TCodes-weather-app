@@ -56,6 +56,7 @@ ul {
 .weather-element {
   font-weight: bolder;
   font-size: 30px;
+  padding-left: 10px;
 }
 .weather-measure {
   font-size: 25px;
