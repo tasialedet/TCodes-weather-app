@@ -8,17 +8,14 @@ h2 {
   font-size: 40px;
 }
 
-li {
-  border-color: #f1fcfe;
-  border: solid;
-  margin-left: 3px;
-  border-bottom-style: none;
-  border-top-style: none;
-  border-style: inset;
-}
 ul {
   list-style: none;
   padding: 0px;
+  text-align: right;
+  padding-right: 20px;
+}
+p {
+  font-size: 20px;
 }
 
 .locate {
@@ -41,13 +38,14 @@ ul {
   text-align: left;
   margin-left: 10px;
   font-size: 28px;
+  padding-top: 10px;
 }
 .day {
   font-weight: bolder;
   font-size: 24px;
 }
 .container-forecast {
-  margin-left: 10px;
+  padding-right: 20px;
 }
 .container-days {
   margin-left: 0px;
@@ -66,19 +64,20 @@ ul {
   max-width: 900px;
   padding-left: 20px;
   margin-left: 20px;
-  background: linear-gradient(
-    181.2deg,
-    rgb(181, 239, 249) 10.5%,
-    rgb(254, 254, 254) 86.8%
-  );
+  background: linear-gradient(109.6deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212) 55.4%, rgb(255, 233, 171) 100.2%);
 }
 .temp {
-  font-size: 38px;
+  font-size: 40px;
 }
 .units {
-  font-size: 20px;
+  font-size: 25px;
   position: relative;
   top: -17px;
+}
+.weather-forecast {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
 }
 #weather-wind {
   font-size: 30px;
