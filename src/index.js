@@ -1,3 +1,4 @@
+// date and time
 let now = new Date();
 const time = new Date().toLocaleString("en-US", {
   hour: "numeric",
@@ -22,6 +23,8 @@ if (minute < 10) {
 
 let dateElement = document.querySelector("#date");
 dateElement.innerHTML = `${time}`;
+
+// search
 
 function searchCity(city) {
   let apiKey = "87ce0353859a253c71daf94d0f9ad34b";
@@ -111,6 +114,7 @@ function showWeatherConditions(response) {
 
   getForecast(response.data.coord);
 }
+// current location
 
 function showPosition(position) {
   let lat = position.coords.latitude;
