@@ -104,16 +104,12 @@ function displayForecast() {
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `
-<div class = "weather-forecast" id = "weather-forecast">
-						<div class="col-2">
-							<span class = "sunday"> Sun </span> 
-              <div class = "weather-forecast-icon"> <img src = ""id = "forecast-pic"> </div>
-              <span class ="forecast-temp-max"> 92° </span> | <span class = "forecast-temp-min"> 85°F</span></div>
-				</div>
+      `<div class="col-2">
+							<div class = "forecast-date"> ${day} </div> 
+              <div class = "weather-forecast-icon"> <img src = "http://openweathermap.org/img/wn/50d@2x.png"id = "forecast-pic"> </div>
+              <span class ="forecast-temp-max"> 92° </span> | <span class = "forecast-temp-min"> 85°F</span>
 </div>`;
-    
   });
-forecastHTML = forecastHTML + `</div>`;
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
