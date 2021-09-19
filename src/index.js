@@ -23,18 +23,22 @@ if (minute < 10) {
 let dateElement = document.querySelector("#date");
 dateElement.innerHTML = `${time}`;
 
-function searchCity(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#city-input");
-  let city = `${searchInput.value}`;
-
+function searchCity(city) {
   let apiKey = "87ce0353859a253c71daf94d0f9ad34b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeatherConditions);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  searchCity(cityInputElement.value);
+}
+
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", searchCity);
+form.addEventListener("submit", handleSubmit);
+
+searchCity("Houston");
 
 function displayForecast(response) {
   let forecast = response.data.daily;
