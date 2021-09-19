@@ -96,3 +96,24 @@ celsiusLink.addEventListener("click", displayCelsius);
 
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class= "row">`;
+  let days = ["Sun", "Mon", "Tues", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+<div class = "weather-forecast" id = "weather-forecast">
+						<div class="col-2">
+							<span class = "sunday"> Sun </span> 
+              <div class = "weather-forecast-icon"> <img src = ""id = "forecast-pic"> </div>
+              <span class ="forecast-temp-max"> 92° </span> | <span class = "forecast-temp-min"> 85°F</span></div>
+				</div>
+</div>`;
+    
+  });
+forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
