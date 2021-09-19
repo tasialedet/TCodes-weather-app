@@ -37,25 +37,27 @@
 		</div>
 			<div class="container-now">
 				<h1 id = "city"></h1> 
-				<h2 id = "date"></h2>
-				<strong class = "temp" id = "temperature"></strong> <span class = "units"><a href = "#" id = "celsius">°C</a>|<a href = "#" id = "fahrenheit">°F</a></span> 
+				<h2> Last checked: <span id = "date"></span></h2>
+				
+				<div class = "row">
+
+				<div class="col-6">
+				<div class = "weather-element" id = "description"></div>
+				<span id= "weather-icon"><img src = "" id = "icon-pic"></span><strong class = "temp" id = "temperature"></strong><span class = "units">°F</span> 			
 			</div>
 
-			<div class="container-forecast">
-				<div class="row">
-
-				<div class="col-4" id = "precipitation">
-						<span class= "weather-element" id = "description"></span> 
-				</br> <span id= "weather-icon"><img src = ""id = "icon-pic"></span>
+				<div class="col-6">
+					<ul>
+						<li class= "weather-element" id = "wind">Wind  <span id= "weather-wind"></span></li>
+				<li class = "weather-element" id = "humidity">Humidity <span id = "weather-humidity"></span></li>
+				</ul>
+				</div>
 				</div>
 
-				<div class="col-4 order-3" id = "wind">
-						<span class= "weather-element">Wind 💨 </span></br> <div id= "weather-wind"></div>
-				</div>
-
-			</div>
 <div class = "weather-forecast" id = "weather-forecast"></div>
-<a href= "https://github.com/tasialedet/TCodes-weather-app">Open Source Code 💻</a> by Tasia Ledet
+			</div>
+
+<p><a href= "https://github.com/tasialedet/TCodes-weather-app">Open Source Code 💻</a> by Tasia Ledet</p>
 			</div>
             </div>
 			</div>
