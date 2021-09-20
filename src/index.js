@@ -56,9 +56,11 @@ function displayForecast(response) {
   precipElement.innerHTML = `${precipMeasure} %`;
 
   let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
+
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
@@ -66,15 +68,14 @@ function displayForecast(response) {
         `
       <div class="col-2">
 							<div class = "forecast-date"> ${formatDay(forecastDay.dt)} </div> 
-              <div class = "weather-forecast-icon"> <img src = "http://openweathermap.org/img/wn/${
+              <div class = "weather-forecast-icon"><img src = "http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
-              }@2x.png"id = "forecast-pic" width= "42"> </div>
+              }@2x.png" id = "forecast-pic"></div>
               <span class ="forecast-temp-max"> ${Math.round(
                 forecastDay.temp.max
-              )}° </span> | <span class = "forecast-temp-min"> ${Math.round(
+              )}° </span>|<span class = "forecast-temp-min"> ${Math.round(
           forecastDay.temp.min
         )}°</span>
-</div>
 `;
       forecastHTML = forecastHTML + `</div>`;
       forecastElement.innerHTML = forecastHTML;
