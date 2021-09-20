@@ -51,6 +51,7 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
+  console.log(response);
   let precipMeasure = Math.round(response.data.daily[0].rain);
   precipElement = document.querySelector("#weather-precip");
   precipElement.innerHTML = `${precipMeasure} %`;
@@ -90,7 +91,6 @@ function getForecast(coordinates) {
 }
 
 function showWeatherConditions(response) {
-  console.log(response);
   let city = response.data.name;
   let descriptionElement = response.data.weather[0].description;
   let windElement = Math.round(response.data.wind.speed);
