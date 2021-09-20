@@ -20,43 +20,42 @@ let minute = now.getMinutes();
 if (minute < 10) {
   minute = `0${minute}`;
 }
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
 
-let dateElement = document.querySelector("#date");
-dateElement.innerHTML = `${time}`;
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = `${time}`;
 
-// search
+  // search
 
-function searchCity(city) {
-  let apiKey = "87ce0353859a253c71daf94d0f9ad34b";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial`;
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeatherConditions);
-}
+  function searchCity(city) {
+    let apiKey = "87ce0353859a253c71daf94d0f9ad34b";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial`;
+    axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeatherConditions);
+  }
 
-function handleSubmit(event) {
-  event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
-  searchCity(cityInputElement.value);
-}
+  function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    searchCity(cityInputElement.value);
+  }
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
+  let form = document.querySelector("#search-form");
+  form.addEventListener("submit", handleSubmit);
 
-searchCity("Houston");
+  searchCity("Houston");
 
-function displayForecast(response) {
-  console.log(response);
-  let precipMeasure = Math.round(response.data.daily[0].rain);
-  precipElement = document.querySelector("#weather-precip");
-  precipElement.innerHTML = `${precipMeasure} %`;
-  let forecast = response.data.daily;
-  let forecastElement = document.querySelector("#weather-forecast");
-  let forecastHTML = `<div class= "row">`;
-
-  function formatDay(timestamp) {
-    let date = new Date(timestamp * 1000);
-    let day = date.getDay();
-    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    return days[day];
+  function displayForecast(response) {
+    console.log(response);
+    let precipMeasure = Math.round(response.data.daily[0].rain);
+    precipElement = document.querySelector("#weather-precip");
+    precipElement.innerHTML = `${precipMeasure} %`;
+    let forecast = response.data.daily;
+    let forecastElement = document.querySelector("#weather-forecast");
+    let forecastHTML = `<div class= "row">`;
   }
 
   forecast.forEach(function (forecastDay, index) {
@@ -76,8 +75,7 @@ function displayForecast(response) {
         )}°</span>
 </div>
 `;
-    }
-  });
+    });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
