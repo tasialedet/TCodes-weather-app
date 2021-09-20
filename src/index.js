@@ -51,10 +51,14 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response);
   let precipMeasure = Math.round(response.data.daily[0].rain);
-  precipElement = document.querySelector("#weather-precip");
-  precipElement.innerHTML = `${precipMeasure} %`;
+
+  if (precipMeasure === NaN) {
+    precipElement.innerHTML = `Not available 😓`;
+  } else {
+    precipElement = document.querySelector("#weather-precip");
+    precipElement.innerHTML = `${precipMeasure} %`;
+  }
 
   let forecast = response.data.daily;
 
