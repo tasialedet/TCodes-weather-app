@@ -24,12 +24,6 @@ if (minute < 10) {
 let dateElement = document.querySelector("#date");
 dateElement.innerHTML = `${time}`;
 
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  return days[day];
-}
 // search
 
 function searchCity(city) {
@@ -49,11 +43,19 @@ form.addEventListener("submit", handleSubmit);
 
 searchCity("Houston");
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayForecast(response) {
   console.log(response);
   let precipMeasure = Math.round(response.data.daily[0].rain);
   precipElement = document.querySelector("#weather-precip");
   precipElement.innerHTML = `${precipMeasure} %`;
+
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#weather-forecast");
   let forecastHTML = `<div class= "row">`;
