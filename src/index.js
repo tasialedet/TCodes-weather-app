@@ -51,15 +51,14 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response);
   let precipMeasure = Math.round(response.data.daily[0].rain);
   precipElement = document.querySelector("#weather-precip");
   precipElement.innerHTML = `${precipMeasure} %`;
 
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#weather-forecast");
-  let forecastHTML = `<div class= "row">`;
 
+  let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
@@ -69,7 +68,7 @@ function displayForecast(response) {
 							<div class = "forecast-date"> ${formatDay(forecastDay.dt)} </div> 
               <div class = "weather-forecast-icon"> <img src = "http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
-              }@2x.png"id = "forecast-pic"> </div>
+              }@2x.png"id = "forecast-pic" width= "42"> </div>
               <span class ="forecast-temp-max"> ${Math.round(
                 forecastDay.temp.max
               )}° </span> | <span class = "forecast-temp-min"> ${Math.round(
@@ -77,7 +76,6 @@ function displayForecast(response) {
         )}°</span>
 </div>
 `;
-
       forecastHTML = forecastHTML + `</div>`;
       forecastElement.innerHTML = forecastHTML;
     }
