@@ -53,13 +53,11 @@ function formatDay(timestamp) {
 function displayForecast(response) {
   let precipMeasure = Math.round(response.data.daily[0].rain);
   precipElement = document.querySelector("#weather-precip");
-  
-  const a = nanValue || 0;
 
   if (precipMeasure > 0) {
     precipElement.innerHTML = `${precipMeasure} %`;
   }
-  if (precipMeasure === a) {
+  if (precipMeasure === 0) {
     precipElement.innerHTML = `-`;
   }
 
