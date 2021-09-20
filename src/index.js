@@ -54,20 +54,12 @@ function displayForecast(response) {
   let precipMeasure = Math.round(response.data.daily[0].rain);
   precipElement = document.querySelector("#weather-precip");
 
-  function measurePrecip(x) {
-    if (isNaN(x)) {
-      return 0;
-    }
-    let x = precipMeasure;
-
-    if (precipMeasure > 0) {
-      precipElement.innerHTML = `${precipMeasure} %`;
-    }
-    if (precipMeasure === 0) {
-      precipElement.innerHTML = `0 %`;
-    }
+  if (precipMeasure > 0) {
+    precipElement.innerHTML = `${precipMeasure} %`;
   }
-  measurePrecip();
+  if (precipMeasure === undefined) {
+    precipElement.innerHTML = `0 %`;
+  }
 
   let forecast = response.data.daily;
 
